@@ -1,0 +1,118 @@
+body {
+    background-image: url('image.jpg');
+    background-size: cover;
+    background-position: center;
+    font-family: 'Arial', sans-serif;
+}
+
+.form-wrapper {
+    border: 5px solid #ffb300; /* تنظیم ضخامت و رنگ حاشیه */
+    padding: 30px; /* فاصله داخلی حاشیه */
+    border-radius: 25px; /* گرد کردن گوشه‌های حاشیه */
+    background-color: rgba(255, 255, 255, 0.6); /* رنگ پس‌زمینه شفاف */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15); /* اضافه کردن سایه */
+    display: flex; /* فعال‌سازی نمایش فلکس برای مرکزی کردن المان‌ها */
+    flex-direction: column; /* ترتیب عمودی المان‌ها */
+    align-items: center; /* تراز المان‌ها در مرکز */
+    gap: 20px; /* فاصله بین المان‌ها */
+    animation: borderRainbow 8s infinite linear;
+}
+
+@keyframes borderRainbow {
+    0% { border-color: red; }
+    14% { border-color: orange; }
+    28% { border-color: yellow; }
+    42% { border-color: green; }
+    57% { border-color: blue; }
+    71% { border-color: indigo; }
+    85% { border-color: violet; }
+    100% { border-color: red; }
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px; /* افزایش فاصله بین عناصر */
+    padding-top: 100px; /* افزایش فاصله از بالای صفحه */
+    padding: 50px 0; /* افزایش فاصله از بالا و پایین */
+}
+
+input {
+    width: 300px; /* افزایش پهنای باکس */
+    padding: 15px;
+    border: 3px solid #ffb300; /* افزایش ضخامت حاشیه */
+    border-radius: 15px; /* افزایش شعاع گوشه‌ها */
+    background-color: rgba(255, 255, 255, 0.5);
+    font-size: 1.2rem; /* افزایش اندازه فونت */
+    transition: transform 0.3s ease; /* انیمیشن برای حرکت */
+    position: relative;
+}
+
+input:focus {
+    transform: scale(1.05); /* کمی بزرگ‌تر می‌شود هنگام فوکوس */
+}
+
+button {
+    width: 320px; /* افزایش پهنای دکمه */
+    padding: 20px;
+    border: none;
+    border-radius: 20px;
+    background-color: #FF69B4;
+    color: white;
+    cursor: pointer;
+    font-size: 1.5rem;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2); /* اضافه کردن سایه */
+    transition: all 0.3s ease; /* انیمیشن برای تغییرات */
+}
+
+button:hover {
+    transform: scale(1.1); /* بزرگ‌تر می‌شود هنگام hover */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3); /* تغییر سایه */
+}
+
+@keyframes birthdayAnimation {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+.heart {
+    width: 20px;
+    height: 20px;
+    background-color: red;
+    position: absolute;
+    transform: rotate(-45deg);
+    bottom: 20px;
+  }
+  .heart::before,
+  .heart::after {
+    content: "";
+    background-color: red;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+  }
+  .heart::before {
+    top: -10px;
+    left: 0;
+  }
+  .heart::after {
+    top: 0;
+    left: 10px;
+  }
+  
+  .firework-particle {
+    position: fixed;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    opacity: 1;
+  }
+
+
+
+
