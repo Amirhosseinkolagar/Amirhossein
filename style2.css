@@ -1,22 +1,58 @@
 @import url('https://fonts.googleapis.com/css2?family=Vazir:wght@300;400;500&display=swap');
 
 body {
+    font-family: 'Vazir', sans-serif;
+    direction: rtl;
+    margin: 0;
+    padding: 0;
     background-image: url('background_resized.jpg');
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
-    background-attachment: fixed;
-    font-family: 'Vazir', sans-serif;
-    direction: rtl; /* راست چین کردن تمام متون درون بدنه */
-}
-
-body {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    margin: 0;
-    background-color: #f0f0f0;
+}
+
+/* مدیا کوئری برای صفحه نمایش‌های با عرض بیش از 800 پیکسل */
+@media (min-width: 800px) {
+    body {
+        background-size: cover;
+    }
+}
+
+/* مدیا کوئری برای صفحه نمایش‌های با عرض کمتر از 800 پیکسل */
+@media (max-width: 799px) {
+    body {
+        background-size: 100% 100%;
+    }
+}
+
+.light-button {
+    padding: 10px 20px;
+    font-size: calc(10px + 1vw); /* پویا بر اساس اندازه صفحه نمایش */
+    border: 4px solid #084b13;
+    background-color: #000000be;
+    color: #e4fcff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.light-button:hover {
+    transform: translateY(-2px) scale(1.05);
+}
+
+
+@media (max-width: 768px) {
+    .light-button, .message-box {
+        padding: 5vw; /* افزایش پدینگ در صفحات کوچکتر */
+        font-size: calc(12px + 2vw); /* افزایش اندازه فونت برای قابل خوانا بودن بهتر */
+    }
+
+    .message-box {
+        width: 90%; /* افزایش عرض باکس پیام در صفحات کوچکتر */
+    }
 }
 
 @keyframes rotateLight {
@@ -42,27 +78,14 @@ body {
 }
 
 .light-button:hover {
-    transform: translateY(-2px) scale(1.02);
+    transform: translateY(-2px) scale(1.05);
 }
 
-/* .light-button::before {
-    content: '';
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background: radial-gradient(circle, rgba(0, 255, 255, 0.4) 10%, transparent 10%),
-                radial-gradient(circle, transparent 10%, rgba(0, 255, 204, 0.4) 10%);
-    background-size: 10% 10%;
-    animation: rotateLight 2s linear infinite;
-    border-radius: 50%;
-} */
 
 .message-box {
     display: none; /* نمایش داده شود برای دیدن افکت */
-    margin: 20px; /* برای قرارگیری در وسط */
-    padding: 20px;
+    margin: 20px;
+    padding: 2vw;
     background-color: rgba(0, 0, 0, 0.649); /* Light blue background for a calming effect */
     color: #ffffff; /* Dark teal text for good readability */
     border: 5px solid rgb(0, 22, 46); /* Teal border */
@@ -71,7 +94,8 @@ body {
     transition: opacity 2s ease-in-out;
     text-align: center; /* وسط چین کردن متن تبریک */
     width: 50%; /* تنظیم عرض باکس */
-    height: 15%; /* اگر نسبت ارتفاع به عرض مورد نیاز است */
+    max-width: 600px;
+    height: 20%; /* اگر نسبت ارتفاع به عرض مورد نیاز است */
     position: absolute; /* برای قرارگیری دقیق در مرکز */
     top: 50%;
     left: 50%;
