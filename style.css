@@ -6,6 +6,36 @@ body {
 }
 
 .form-wrapper {
+    border: 5px solid #ffb300;
+    padding: 2vw; /* تغییر به واحد نسبی */
+    border-radius: 25px;
+    background-color: rgba(255, 255, 255, 0.6);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1vw; /* تغییر به واحد نسبی */
+}
+
+input, button {
+    width: 80%; /* تغییر به درصد برای رسپانسیو بودن */
+    max-width: 300px; /* حداکثر عرض برای جلوگیری از بیش از حد بزرگ شدن در صفحات بزرگ */
+    padding: 15px;
+    font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+    .form-wrapper {
+        padding: 5%; /* افزایش پدینگ در دستگاه‌های کوچکتر */
+    }
+
+    input, button {
+        width: 90%; /* افزایش عرض در دستگاه‌های کوچکتر */
+    }
+}
+
+
+.form-wrapper {
     border: 5px solid #ffb300; /* تنظیم ضخامت و رنگ حاشیه */
     padding: 30px; /* فاصله داخلی حاشیه */
     border-radius: 25px; /* گرد کردن گوشه‌های حاشیه */
@@ -112,7 +142,3 @@ button:hover {
     border-radius: 50%;
     opacity: 1;
   }
-
-
-
-
