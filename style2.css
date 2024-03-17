@@ -5,7 +5,7 @@ body {
     direction: rtl;
     margin: 0;
     padding: 0;
-    background-image: url('background_resized.jpg');
+    background-image: url('image2-d.jpg');
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -13,6 +13,13 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+}
+
+@media (max-width: 320px) {
+    /* برای تبلت‌ها */
+    body {
+        background-image: url('image2-d.jpg'); /* تصویر با اندازه متوسط برای بهینه‌سازی */
+    }
 }
 
 /* مدیا کوئری برای صفحه نمایش‌های با عرض بیش از 800 پیکسل */
