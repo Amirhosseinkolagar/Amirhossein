@@ -1,9 +1,15 @@
 body {
     background-image: url('image1.jpg');
     background-size: cover;
-    background-position: center;
+    background-position: center center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
     font-family: 'Arial', sans-serif;
 }
+
 
 .form-wrapper {
     border: 5px solid #ffb300;
