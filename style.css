@@ -1,5 +1,5 @@
 body {
-    background-image: url('image1.jpg');
+    background-image: url('image-D.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -10,6 +10,27 @@ body {
     font-family: 'Arial', sans-serif;
 }
 
+@media (max-width: 1024px) {
+    /* برای تبلت‌ها */
+    body {
+        background-image: url('image-D.jpg'); /* تصویر با اندازه متوسط برای بهینه‌سازی */
+    }
+}
+
+@media (max-width: 320px) {
+    /* برای دستگاه‌های موبایل */
+    body {
+        background-image: url('image-m.jpg'); /* تصویر کوچک‌تر برای سرعت بارگذاری بهتر */
+    }
+
+    .form-wrapper {
+        padding: 5%;
+    }
+
+    input, button {
+        width: 90%;
+    }
+}
 
 .form-wrapper {
     border: 5px solid #ffb300;
